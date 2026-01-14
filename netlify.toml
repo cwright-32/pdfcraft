@@ -1,0 +1,15 @@
+[build]
+  command = "npm run build"
+  publish = "out"
+
+# Redirect default locale
+[[redirects]]
+  from = "/"
+  to = "/en/"
+  status = 302
+
+# Handle SPA routing for each locale
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
